@@ -31,7 +31,7 @@ def calcular_decimo_terceiro():
         messagebox.showerror("Erro", "Digite números válidos")
 
 root = tk.Tk()
-root.geometry("400x400")
+root.geometry("700x300")
 root.title("Calculador de Desconto do INSS e 13º Salário")
 
 frame_inss = tk.Frame(root)
