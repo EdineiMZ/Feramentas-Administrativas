@@ -16,33 +16,35 @@ def calcular():
 root = tk.Tk()
 root.title('Calculadora de Décimo Terceiro Salário')
 root.geometry('400x200')
+root.iconbitmap("./icone.ico")
+root['bg'] = "#0d76af"
 
 frame = tk.Frame(root)
 frame.pack(pady=10)
 
 salario_label = tk.Label(frame, text='Salário bruto: R$ ')
-salario_label.grid(row=0, column=0)
+salario_label.place(x=0, y=0)
 
 salario_entry = tk.Entry(frame)
-salario_entry.grid(row=0, column=1)
+salario_entry.place(x=100, y=0)
 
 meses_label = tk.Label(frame, text='Meses trabalhados: ')
-meses_label.grid(row=1, column=0)
+meses_label.place(x=0, y=50)
 
 meses_entry = tk.Entry(frame)
-meses_entry.grid(row=1, column=1)
+meses_entry.place(x=100, y=50)
 
 var = tk.StringVar(value='segunda')
 primeira_radio = tk.Radiobutton(frame, text='Primeira parcela', variable=var, value='primeira')
-primeira_radio.grid(row=2, column=0)
+primeira_radio.place(x=0, y=100)
 
 segunda_radio = tk.Radiobutton(frame, text='Segunda parcela', variable=var, value='segunda')
-segunda_radio.grid(row=2, column=1)
+segunda_radio.place(x=100, y=100)
 
 calcular_button = tk.Button(frame, text='Calcular', command=calcular)
-calcular_button.grid(row=3, column=0, columnspan=2)
+calcular_button.place(x=0, y=150, width=200)
 
 resultado_label = tk.Label(frame, text='')
-resultado_label.grid(row=4, column=0, columnspan=2)
+resultado_label.place(x=0, y=200, width=200)
 
 root.mainloop()
